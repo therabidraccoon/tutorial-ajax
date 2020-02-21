@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="js/javascript.js"></script>
+  </head>
+
+  <script>
+    $(document).ready(function() {
+      $("button").click(function() {
+        $.get("https://swapi.co/api/people/", function(data, status) {
+          var personaggi = data.results;
+
+          var html = "";
+          for (var p of personaggi) {
+            html += "<p>" + p.name + "</p>";
+          }
+
+          $("#content").html(html);
+        });
+      });
+    });
+  </script>
+
+  <body>
+    <button>Send an HTTP GET request to a page and get the result back</button>
+
+    <div class="main-content" id="content"></div>
+
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+
+    <p id="paperone" class="paperon-p">AAAAAA</p>
+  </body>
+
+  <script>
+    paperon();
+    showPlanets();
+  </script>
+</html>

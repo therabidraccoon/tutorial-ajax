@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    function stampaValori() {
+      var ese = document.getElementById("esempio");
+      var ciaoElement = document.getElementById("ciao");
+      console.log(ciaoElement);
+      console.log(ciaoElement.name);
+      console.log(ciaoElement.value);
+      console.log(ciaoElement.getAttribute("type"));
+    }
+  </script>
+
+  <body>
+    <input type="text" id="ciao" name="boh" oninput="stampaValori()" />
+  </body>
+</html>

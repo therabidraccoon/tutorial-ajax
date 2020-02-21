@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    function somma() {
+      var primoAdd = parseInt(document.getElementById("primo-addendo").value);
+      var secAdd = parseInt(document.getElementById("secondo-addendo").value);
+
+      var risultato = primoAdd + secAdd;
+      document.getElementById("risultato").innerText = risultato;
+    }
+  </script>
+
+  <body>
+    <input type="number" id="primo-addendo" value="5" />
+    <input type="number" id="secondo-addendo" value="8" />
+    <!-- <button onclick="somma()">SOMMA</button> -->
+    <h1>RISULTATO:</h1>
+    <p id="risultato"></p>
+  </body>
+  <script>
+    somma();
+  </script>
+</html>
